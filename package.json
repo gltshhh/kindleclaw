@@ -1,0 +1,17 @@
+{
+  "name": "kindleclaw",
+  "version": "0.1.0",
+  "description": "Renderer agendy openclaw -> PNG dla Kindle screensaver",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cron": "^1.8.2",
+    "dotenv": "^16.6.1",
+    "fs-extra": "^10.0.0",
+    "gm": "^1.23.1",
+    "puppeteer": "^11.0.0"
+  }
+}

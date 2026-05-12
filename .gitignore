@@ -1,0 +1,14 @@
+node_modules/
+.env
+output/
+data/agenda.md
+*.log
+
+# Prywatna lista zadań — może zawierać realne dane (kontakty, instytucje)
+TASKS.md
+
+# Artefakty debugowe
+kindle_check.png
+
+# Lokalne ustawienia Claude Code
+.claude/
