@@ -18,25 +18,6 @@ Kindlu (`onlinescreensaver-k4` w siostrzanym katalogu) pobiera obraz przez HTTP.
 — ten sam pomysł na pipeline (Node + Puppeteer + GraphicsMagick + HTTP :5000),
 ten sam punkt styku z linią „online screensaver" Petersona po stronie Kindla.
 
-**Co jednak jest inne** (i dlaczego to nie jest fork):
-
-| | `sibbl/hass-lovelace-kindle-screensaver` | `kindleclaw` |
-|---|---|---|
-| Źródło treści | Home Assistant Lovelace (zewn. UI) | Lokalny `data/agenda.md` (markdown) |
-| Co Puppeteer rendruje | UI cudzej aplikacji (HA) | Własny `template.html` |
-| Klient docelowy | dowolny Kindle z online screensaver | `onlinescreensaver-k4` (fork pod K4 konkretnie) |
-| Forma | Hassio Add-on / docker hub image | Standalone Node app |
-| Wspólny kod źródłowy | — | — (tylko wzorzec architektoniczny) |
-
-Po stronie klienta sytuacja jest inna: **`onlinescreensaver-k4` to fork** linii
-peterson → Kuhno92 → KindleOnlineScreensaver, przerobiony pod ograniczenia K4 NT
-(BusyBox 1.7.2). Tam kod jest faktycznie odziedziczony i odpowiednio okredytowany
-w jego własnym README.
-
-**Czyli precyzyjnie:** backend (`kindleclaw`) = niezależna re-implementacja
-w stylu sibbl, klient (`onlinescreensaver-k4`) = fork peterson/Kuhno92, system
-KindleClaw jako całość = ich połączenie zaprojektowane pod K4.
-
 ## Architektura
 
 ```
